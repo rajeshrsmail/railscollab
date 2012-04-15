@@ -1,0 +1,7 @@
+This railscollab application is similar to Basecamp.
+Works finely
+username for site admin: admin
+password: password
+
+you need 1.9.2 ruby
+The bundle is in S3 of size 16MB
