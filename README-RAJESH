@@ -5,3 +5,23 @@ password: password
 
 you need 1.9.2 ruby
 The bundle is in S3 of size 16MB
+
+========================
+Update of Jul 2012
+========================
+after bundle install,
+bundle exec rake db:setup
+bundle exec rake db:seed ( with RAILS_ENV=production)
+
+needs to be run, it lookslike so.  Otherwise, it shows an error when db migration:
+
+==  CreateWikiPages: migrating ================================================
+-- create_table(:wiki_pages)
+   -> 0.0248s
+-- add_index(:wiki_pages, :main)
+   -> 0.0348s
+rake aborted!
+An error has occurred, all later migrations canceled:
+
+Mysql::Error: Incorrect table name '': CREATE TABLE `` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `wiki_page_id` int(11), `version` int(11)) ENGINE=InnoDB
+
